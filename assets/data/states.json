@@ -1,0 +1,155 @@
+{
+  "error": false,
+  "msg": "states in Nigeria retrieved",
+  "data": {
+    "name": "Nigeria",
+    "iso3": "NGA",
+    "iso2": "NG",
+    "states": [
+      {
+        "name": "Abia State",
+        "state_code": "AB"
+      },
+      {
+        "name": "Adamawa State",
+        "state_code": "AD"
+      },
+      {
+        "name": "Akwa Ibom State",
+        "state_code": "AK"
+      },
+      {
+        "name": "Anambra State",
+        "state_code": "AN"
+      },
+      {
+        "name": "Bauchi State",
+        "state_code": "BA"
+      },
+      {
+        "name": "Bayelsa State",
+        "state_code": "BY"
+      },
+      {
+        "name": "Benue State",
+        "state_code": "BE"
+      },
+      {
+        "name": "Borno State",
+        "state_code": "BO"
+      },
+      {
+        "name": "Cross River State",
+        "state_code": "CR"
+      },
+      {
+        "name": "Delta State",
+        "state_code": "DE"
+      },
+      {
+        "name": "Ebonyi State",
+        "state_code": "EB"
+      },
+      {
+        "name": "Edo State",
+        "state_code": "ED"
+      },
+      {
+        "name": "Ekiti State",
+        "state_code": "EK"
+      },
+      {
+        "name": "Enugu State",
+        "state_code": "EN"
+      },
+      {
+        "name": "Federal Capital Territory",
+        "state_code": "FC"
+      },
+      {
+        "name": "Gombe State",
+        "state_code": "GO"
+      },
+      {
+        "name": "Imo State",
+        "state_code": "IM"
+      },
+      {
+        "name": "Jigawa State",
+        "state_code": "JI"
+      },
+      {
+        "name": "Kaduna State",
+        "state_code": "KD"
+      },
+      {
+        "name": "Kano State",
+        "state_code": "KN"
+      },
+      {
+        "name": "Katsina State",
+        "state_code": "KT"
+      },
+      {
+        "name": "Kebbi State",
+        "state_code": "KE"
+      },
+      {
+        "name": "Kogi State",
+        "state_code": "KO"
+      },
+      {
+        "name": "Kwara State",
+        "state_code": "KW"
+      },
+      {
+        "name": "Lagos State",
+        "state_code": "LA"
+      },
+      {
+        "name": "Nasarawa State",
+        "state_code": "NA"
+      },
+      {
+        "name": "Niger State",
+        "state_code": "NI"
+      },
+      {
+        "name": "Ogun State",
+        "state_code": "OG"
+      },
+      {
+        "name": "Ondo State",
+        "state_code": "ON"
+      },
+      {
+        "name": "Osun State",
+        "state_code": "OS"
+      },
+      {
+        "name": "Oyo State",
+        "state_code": "OY"
+      },
+      {
+        "name": "Plateau State",
+        "state_code": "PL"
+      },
+      {
+        "name": "Sokoto State",
+        "state_code": "SO"
+      },
+      {
+        "name": "Taraba State",
+        "state_code": "TA"
+      },
+      {
+        "name": "Yobe State",
+        "state_code": "YO"
+      },
+      {
+        "name": "Zamfara State",
+        "state_code": "ZA"
+      }
+    ]
+  }
+}

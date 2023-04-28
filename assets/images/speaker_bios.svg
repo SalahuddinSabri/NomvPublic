@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="55.757" height="68.645" viewBox="0 0 55.757 68.645">
+  <defs>
+    <filter id="Path_355" x="0" y="0" width="55.757" height="68.645" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_1289" data-name="Group 1289" transform="translate(8 6)">
+    <g transform="matrix(1, 0, 0, 1, -8, -6)" filter="url(#Path_355)">
+      <path id="Path_355-2" data-name="Path 355" d="M0,0H39.757V52.645H0ZM38.469,1.321H1.289V51.388h37.18Z" transform="translate(8 6)" fill="#fff" stroke="#fff" stroke-width="1"/>
+    </g>
+    <path id="Path_356" data-name="Path 356" d="M39.942,19.8A10.31,10.31,0,1,1,29.6,30.142,10.354,10.354,0,0,1,39.942,19.8Zm8.989,10.407A9.006,9.006,0,1,0,39.813,39.1,8.98,8.98,0,0,0,48.931,30.207Z" transform="translate(-20.063 -13.421)" fill="#fff" stroke="#fff" stroke-width="1"/>
+    <path id="Path_357" data-name="Path 357" d="M21.587,99.9H46.91c.354.838.258,1.257-.773,1.257-7.958-.032-15.884,0-23.842-.032-.354,0-.741-.483-1.1-.741Z" transform="translate(-14.37 -67.714)" fill="#fff" stroke="#fff" stroke-width="1"/>
+    <path id="Path_358" data-name="Path 358" d="M47.332,120.419c-.354.258-.741.741-1.1.741-7.958.032-15.884.032-23.842,0-.354,0-.741-.483-1.1-.741.1-.129.161-.29.258-.419H46.946A4.956,4.956,0,0,0,47.332,120.419Z" transform="translate(-14.438 -81.338)" fill="#fff" stroke="#fff" stroke-width="1"/>
+    <path id="Path_359" data-name="Path 359" d="M21.619,139.9H46.942c.354.838.258,1.257-.805,1.257-7.958-.032-15.884,0-23.842-.032-.354,0-.741-.483-1.1-.741C21.329,140.222,21.49,140.061,21.619,139.9Z" transform="translate(-14.37 -94.827)" fill="#fff" stroke="#fff" stroke-width="1"/>
+    <path id="Path_360" data-name="Path 360" d="M46.623,57.529c-.354-4.285-.29-4.511,1.192-4.446v3.157h7.024V53.083c1.514-.064,1.579.193,1.224,4.446Z" transform="translate(-31.481 -35.975)" fill="#fff" stroke="#fff" stroke-width="1"/>
+    <path id="Path_361" data-name="Path 361" d="M56,41.679a2.69,2.69,0,1,1,2.642-2.61A2.606,2.606,0,0,1,56,41.679Z" transform="translate(-36.122 -24.603)" fill="#fff" stroke="#fff" stroke-width="1"/>
+  </g>
+</svg>

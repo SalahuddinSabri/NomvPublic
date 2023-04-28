@@ -1,0 +1,101 @@
+name: nomv
+description: NOMV
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+#version: 1.0.0+2
+version: 1.0.0+2
+
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^0.13.4
+  cupertino_icons: ^1.0.2
+  getwidget:
+  rflutter_alert:
+  flutter_svg:
+  fluttertoast:
+  package_info_plus:
+#  cached_network_image:
+  cached_network_image:
+      git:
+        url: https://github.com/XuannThucc/flutter_cached_network_image.git
+        path: cached_network_image
+        ref: ff72f00f142f13d889d7549e013af91cb0b523ab
+  #  flutter_pdfview: ^1.2.4
+  flutter_cached_pdfview:
+  flutter_cache_manager:
+#  image_downloader:
+  path:
+  path_provider:
+  rich_text_view:
+  device_info:
+  url_launcher:
+  permission_handler:
+  shared_preferences:
+  simpleprogressdialog: ^1.0.8
+  flutter_html: ^2.2.1
+  email_validator:
+  websafe_svg:
+  percent_indicator:
+  #  flutter_cached_pdfview:
+  #  flutter_cached_pdfview:
+  analyzer: ^1.7.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  fonts:
+    - family: Karla
+      fonts:
+        - asset: assets/fonts/karla.ttf
+        - asset: assets/fonts/Sans.ttf
+    - family: Lato
+      fonts:
+        - asset: assets/fonts/lato.ttf
+    - family: Karla
+      fonts:
+        - asset: assets/fonts/poppins.otf
+        - asset: assets/fonts/Sans.ttf
+          weight: 700
+
+  uses-material-design: true
+
+
+
+  assets:
+    - assets/images/
+    - assets/images/background_app.png
+    - assets/images/app_icon.png
+    - assets/images/signin.png
+    - assets/images/who_we_are.png
+    - assets/images/leadership.png
+    - assets/images/upcoming_conference.png
+    - assets/images/resources.png
+    - assets/images/listings.png
+    - assets/images/speaker_form.png
+    - assets/images/toolbar_background.png
+    - assets/images/upcoming_session.png
+    - assets/images/upcoming_sessiondate.png
+    - assets/images/upcoming_icon.png
+    - assets/images/resources_icon.png
+    - assets/images/resource_back.png
+    - assets/images/listing_background.png
+    - assets/images/filter_icon.png
+    - assets/images/back_splash.png
+    - assets/images/splash_updated.png
+    - assets/data/
+
+
+
+
+
+
+

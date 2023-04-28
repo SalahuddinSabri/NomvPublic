@@ -1,0 +1,335 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_html/flutter_html.dart';
+
+class AboutUs extends StatefulWidget {
+  @override
+  _AboutUsState createState() => _AboutUsState();
+}
+
+class About_Us {
+  final String heading;
+  final String description;
+
+  About_Us(this.heading, this.description);
+
+  factory About_Us.fromJson(Map<String, dynamic> json) {
+    return About_Us(json['heading'], json['description']);
+  }
+}
+
+class _AboutUsState extends State<AboutUs> {
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(statusBarColor: Colors.transparent));
+
+    return Stack(
+      children: <Widget>[
+        Image.asset(
+          "assets/images/background_app.png",
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+          fit: BoxFit.cover,
+        ),
+        WillPopScope(
+          onWillPop: () async => true,
+          child: Scaffold(
+            backgroundColor: Color.fromRGBO(34, 41, 72, 0.9),
+            appBar: new AppBar(
+              centerTitle: true,
+              iconTheme: IconThemeData(color: Colors.white),
+              title: const Text('About Us',
+                  style:
+                      TextStyle(fontFamily: 'Karla', color: Colors.white)),
+              automaticallyImplyLeading: true,
+              backgroundColor: Color.fromRGBO(34, 41, 72, 0.9),
+            ),
+            body: Align(
+              child: Container(
+                margin: EdgeInsets.all(10),
+                width: MediaQuery.of(context).size.width,
+                child: SingleChildScrollView(
+                  child: Container(
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+
+
+                          Container(
+                            alignment: Alignment.centerLeft,
+                            height: 60,
+                            width: double.infinity,
+
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                  topLeft:  Radius.circular(8),
+                                  topRight: Radius.circular(8),
+                                  bottomLeft: Radius.zero,
+                                  bottomRight: Radius.zero),
+                              gradient: LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: [
+                                  Color.fromRGBO(89, 113, 179, 0.2)
+                                      .withOpacity(0.2),
+                                  Color.fromRGBO(89, 113, 179, 0.2)
+                                      .withOpacity(0.2),
+                                ],
+                              ),
+                            ),
+
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(10),
+                                  topRight: Radius.circular(10)),
+                              gradient: LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: [
+                                  Color.fromRGBO(89, 113, 179, 0.2)
+                                      .withOpacity(0.2),
+                                  Color.fromRGBO(89, 113, 179, 0.2)
+                                      .withOpacity(0.2),
+                                ],
+                              ),
+                            ),
+                            padding: EdgeInsets.only(left: 10, bottom: 0, right: 0, top: 15),
+                            child: Text(
+                              'What is the AGPXE'.toUpperCase() + " ?",
+                              textAlign: TextAlign.start,
+                              style: TextStyle(
+                                fontSize: 18.0,
+                                fontFamily: 'Karla',
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                          Card(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(0),
+                            ),
+                            shadowColor: Colors.blue.shade200,
+                            child: Column(
+                              children: [
+                                Container(
+                                    color: Colors.white,
+                                    padding: EdgeInsets.only(
+                                        left: 10,
+                                        bottom: 10,
+                                        right: 10,
+                                        top: 10),
+                                    child: Html(
+                                      // data: snapshot.data[0].description.toString(),
+                                      // useRichText: true,
+                                      data:
+                                          '<p><i><u>The Association for GXP Excellence ("AGXPE") is an IRS recognized 501(c)(3) non-profit organization</u></i> consisting of professionals in all regulated industries who seek to install quality, compliance and excellence in all of their training and cultural transformations. We are dedicated individuals who seek to aid our membership through key interactions with a frequency and duration that is required to sustain core competencies. Donors can deduct contributions to the organization made under IRC Section 170.Our Mission is simple: To develop and share scientifically sound, quality and compliance best practices coupled with practical technical training information and resources to advance quality and compliance training and compliance for, but not limited to, the pharmaceutical, biopharmaceutical, medical device, food, cosmetics and supplement industries through the expertise of our membership.<br><br><b>AGXPE</b> operates throughout the entire United States with its core population in the Northeast corridor. Its leadership is comprised of industry-wide, seasoned professionals. <b>AGXPE</b> strives to bring you more:<ul><li>Regulatory updates with information provided from FDA, DEA, EMA, USP and other regulatory/ standards authorities as well specific GMP, GCP, GLP, GDP, QBD, ICH and ISO information.</li><li>Industry Best Practice Sharing and Updates.</li><li>Special Presentation Sessions.</li><li>Subject Matter Experts in a Diverse Range of Areas.</li><li>Peer Presentation Skill Review Sessions.</li><li>Virtual Discussion Groups.</li><li>Multi-Direction& Webinars & WIKIs.</li><li>Technology —Social Media.</li><li>Relevant Information from Vendors about their Products and Services.</li><li>Conferences, Summits and Meetings that are in the membership travel range and budget.</li></ul><br><br>The <b>AGXPE:</b><br><ul><li>Provides coaching and mentoring to individuals to accelerate knowledge transfer.</li><li>Improves trainer competencies, including knowledge, skills and abilities through collaboration and sharing of best practices.</li><li>Fosters individual member growth and development by providing a platform of peer evaluation during presentation of non-proprietary training programs, ideas and delivery techniques.</li></ul></p>',
+                                      defaultTextStyle: TextStyle(fontSize: 15),
+                                    )),
+                                  Container(
+                                  alignment: Alignment.centerLeft,
+                                  height: 65,
+                                  width: double.infinity,
+                                  decoration: BoxDecoration(
+                                      color: Color.fromRGBO(34, 41, 72, 0.9)),
+                                  padding: EdgeInsets.only(
+                                      left: 10, bottom: 0, right: 10, top: 0),
+                                  child: Text(
+                                    'Benefits of the AGXPE and the Annual Conference'
+                                        .toUpperCase(),
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      fontSize: 18.0,
+                                      fontFamily: 'Karla',
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(height: 5),
+                                Container(
+                                    color: Colors.white,
+                                    padding: EdgeInsets.only(
+                                        left: 10,
+                                        bottom: 15,
+                                        right: 10,
+                                        top: 10),
+
+                                  child: Html(
+                                    // data: snapshot.data[0].description.toString(),
+                                    // useRichText: true,
+                                    data: '<p>The benefits of the <b>AGXPE</b> and attending the annual conference are ultimately the cost savings achieved through best practice sharing opportunities, rapid knowledge transfer, personnel qualification updates, professional advancement, and the development of competencies through leadership and teambuilding.<br><br>During the conference, ideas are shared through live interactions and discussions within our membership and with Regulatory Authorities. Presenters provide new and innovative training ideas, hot topics, tools, tips and techniques that work.<br><br>A key benefit to the individual, and to the company, is realizing that nobody is alone. The <b>AGXPE</b> has experts at the conference that have information and valuable lessons to share. Time and money are saved though direct conversations and information sharing Participants from other regulated industries are available to collaborate with and discuss solution to vexing problems.<br><br><b>AGXPE</b> conferences provide robust content that keeps teams current, informed and educated on current compliance issues. In addition, the inclusion of process excellence activities puts a unique spin on many of the presentations and discussions. Participating in seminars and facilitated discussions with other industry professionals and your peers helps overcome existing challenges that face each of us. The conference sessions provide learning and development opportunities for the speaker and the attendees. Sending a representative to an <b>AGXPE</b> conference demonstrates your commitment to benchmark best practices. Each <b>AGXPE</b> conference is a way to maintain current with regulatory updates. The cost to attend the conference is reasonable compared to the benefits gained by the attendees and sponsoring organizations.<br><br>Participation in the <b>AGXPE</b> helps build core competencies of leaders. Members have opportunities to volunteer for conference committees, present topics to peers, and partake in local chapter leadership. Volunteers take on roles that are sometimes are out of their comfort zone and stretch their abilities. This can be independently or in small teams. Conference speakers are seen by other attendees as leaders and experts in their field willing to share their knowledge and experience with others. All of these opportunities provide exposure to develop skills that may not be attainable from inside ones company. All <b>AGXPE</b> work provides a key networking and relationship building component that is important in all professional endeavors. These relationships can be called upon for future support or idea generation.<br><br>Joining the <b>AGXPE</b> and attending the annual conference is a true testament to professional development and networking. At every turn the <b>AGXPE</b> provides these opportunities to all who want to take advantage of them. Please join the <b>AGXPE</b> and register for the conference now!<br><br></p>',
+                                    defaultTextStyle: TextStyle(fontSize: 15),
+                                  )),
+                              ],
+                            ),
+                          ),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                          Container(
+                            alignment: Alignment.centerLeft,
+                            height: 65,
+                            width: double.infinity,
+                            //                               decoration: BoxDecoration(color: Color.fromRGBO(34, 41, 72, 0.9)
+                            //
+                            // gradient: LinearGradient(
+                            // begin: Alignment.topCenter,
+                            // end: Alignment.bottomCenter,
+                            // colors: [
+                            // Color.fromRGBO(89,113,179,0.2).withOpacity(0.2),
+                            // Color.fromRGBO(89,113,179,0.2).withOpacity(0.2),
+                            // ],
+                            // ),
+
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                  topLeft:  Radius.circular(8),
+                                  topRight: Radius.circular(8),
+                                  bottomLeft: Radius.zero,
+                                  bottomRight: Radius.zero),
+                              gradient: LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: [
+                                  Color.fromRGBO(89, 113, 179, 0.2)
+                                      .withOpacity(0.2),
+                                  Color.fromRGBO(89, 113, 179, 0.2)
+                                      .withOpacity(0.2),
+                                ],
+                              ),
+                            ),
+
+                            padding: EdgeInsets.only(
+                                left: 10, bottom: 0, right: 10, top: 0),
+                            child: Text(
+                              'Benefits of the AGXPE and the Annual Conference'
+                                  .toUpperCase(),
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 18.0,
+                                fontFamily: 'Karla',
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 5),
+                          Container(
+                              color: Colors.white,
+                              padding: EdgeInsets.only(
+                                  left: 10, bottom: 15, right: 10, top: 10),
+                              child: Html(
+                                // data: snapshot.data[0].description.toString(),
+                                // useRichText: true,
+                                data:
+                                '<p>The benefits of the <b>AGXPE</b> and attending the annual conference are ultimately the cost savings achieved through best practice sharing opportunities, rapid knowledge transfer, personnel qualification updates, professional advancement, and the development of competencies through leadership and teambuilding.<br><br>During the conference, ideas are shared through live interactions and discussions within our membership and with Regulatory Authorities. Presenters provide new and innovative training ideas, hot topics, tools, tips and techniques that work.<br><br>A key benefit to the individual, and to the company, is realizing that nobody is alone. The <b>AGXPE</b> has experts at the conference that have information and valuable lessons to share. Time and money are saved though direct conversations and information sharing Participants from other regulated industries are available to collaborate with and discuss solution to vexing problems.<br><br><b>AGXPE</b> conferences provide robust content that keeps teams current, informed and educated on current compliance issues. In addition, the inclusion of process excellence activities puts a unique spin on many of the presentations and discussions. Participating in seminars and facilitated discussions with other industry professionals and your peers helps overcome existing challenges that face each of us. The conference sessions provide learning and development opportunities for the speaker and the attendees. Sending a representative to an <b>AGXPE</b> conference demonstrates your commitment to benchmark best practices. Each <b>AGXPE</b> conference is a way to maintain current with regulatory updates. The cost to attend the conference is reasonable compared to the benefits gained by the attendees and sponsoring organizations.<br><br>Participation in the <b>AGXPE</b> helps build core competencies of leaders. Members have opportunities to volunteer for conference committees, present topics to peers, and partake in local chapter leadership. Volunteers take on roles that are sometimes are out of their comfort zone and stretch their abilities. This can be independently or in small teams. Conference speakers are seen by other attendees as leaders and experts in their field willing to share their knowledge and experience with others. All of these opportunities provide exposure to develop skills that may not be attainable from inside ones company. All <b>AGXPE</b> work provides a key networking and relationship building component that is important in all professional endeavors. These relationships can be called upon for future support or idea generation.<br><br>Joining the <b>AGXPE</b> and attending the annual conference is a true testament to professional development and networking. At every turn the <b>AGXPE</b> provides these opportunities to all who want to take advantage of them. Please join the <b>AGXPE</b> and register for the conference now!<br><br></p>',
+                                defaultTextStyle: TextStyle(fontSize: 15),
+                              )),
+
+
+
+
+
+
+
+                          // 2nd
+                          Container(
+                            alignment: Alignment.centerLeft,
+                            height: 65,
+                            width: double.infinity,
+                            //                               decoration: BoxDecoration(color: Color.fromRGBO(34, 41, 72, 0.9)
+                            //
+                            // gradient: LinearGradient(
+                            // begin: Alignment.topCenter,
+                            // end: Alignment.bottomCenter,
+                            // colors: [
+                            // Color.fromRGBO(89,113,179,0.2).withOpacity(0.2),
+                            // Color.fromRGBO(89,113,179,0.2).withOpacity(0.2),
+                            // ],
+                            // ),
+
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                topLeft:  Radius.circular(8),
+                                topRight: Radius.circular(8),
+                                bottomLeft: Radius.zero,
+                                bottomRight: Radius.zero),
+                              gradient: LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: [
+                                  Color.fromRGBO(89, 113, 179, 0.2)
+                                      .withOpacity(0.2),
+                                  Color.fromRGBO(89, 113, 179, 0.2)
+                                      .withOpacity(0.2),
+                                ],
+                              ),
+                            ),
+
+                            padding: EdgeInsets.only(
+                                left: 10, bottom: 0, right: 10, top: 0),
+                            child: Text(
+                              'Benefits of the AGXPE and the Annual Conference'
+                                  .toUpperCase(),
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 18.0,
+                                fontFamily: 'Karla',
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 5),
+                          Container(
+                              color: Colors.white,
+                              padding: EdgeInsets.only(
+                                  left: 10, bottom: 15, right: 10, top: 10),
+                              child: Html(
+                                // data: snapshot.data[0].description.toString(),
+                                // useRichText: true,
+                                data:
+                                    '<p>The benefits of the <b>AGXPE</b> and attending the annual conference are ultimately the cost savings achieved through best practice sharing opportunities, rapid knowledge transfer, personnel qualification updates, professional advancement, and the development of competencies through leadership and teambuilding.<br><br>During the conference, ideas are shared through live interactions and discussions within our membership and with Regulatory Authorities. Presenters provide new and innovative training ideas, hot topics, tools, tips and techniques that work.<br><br>A key benefit to the individual, and to the company, is realizing that nobody is alone. The <b>AGXPE</b> has experts at the conference that have information and valuable lessons to share. Time and money are saved though direct conversations and information sharing Participants from other regulated industries are available to collaborate with and discuss solution to vexing problems.<br><br><b>AGXPE</b> conferences provide robust content that keeps teams current, informed and educated on current compliance issues. In addition, the inclusion of process excellence activities puts a unique spin on many of the presentations and discussions. Participating in seminars and facilitated discussions with other industry professionals and your peers helps overcome existing challenges that face each of us. The conference sessions provide learning and development opportunities for the speaker and the attendees. Sending a representative to an <b>AGXPE</b> conference demonstrates your commitment to benchmark best practices. Each <b>AGXPE</b> conference is a way to maintain current with regulatory updates. The cost to attend the conference is reasonable compared to the benefits gained by the attendees and sponsoring organizations.<br><br>Participation in the <b>AGXPE</b> helps build core competencies of leaders. Members have opportunities to volunteer for conference committees, present topics to peers, and partake in local chapter leadership. Volunteers take on roles that are sometimes are out of their comfort zone and stretch their abilities. This can be independently or in small teams. Conference speakers are seen by other attendees as leaders and experts in their field willing to share their knowledge and experience with others. All of these opportunities provide exposure to develop skills that may not be attainable from inside ones company. All <b>AGXPE</b> work provides a key networking and relationship building component that is important in all professional endeavors. These relationships can be called upon for future support or idea generation.<br><br>Joining the <b>AGXPE</b> and attending the annual conference is a true testament to professional development and networking. At every turn the <b>AGXPE</b> provides these opportunities to all who want to take advantage of them. Please join the <b>AGXPE</b> and register for the conference now!<br><br></p>',
+                                defaultTextStyle: TextStyle(fontSize: 15),
+                              )),
+                        ]),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+showLoaderDialog(BuildContext context) {
+  return showDialog(
+      context: context,
+      barrierDismissible: true,
+      builder: (BuildContext context) {
+        return Center(
+          child: CircularProgressIndicator(),
+        );
+      });
+}
